@@ -1,2 +1,4 @@
-<h1>About us</h1>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi sint numquam quas magni vero suscipit laboriosam repudiandae fugiat corporis molestiae, odio cum nam neque praesentium! Nulla esse soluta repellendus, corrupti earum aliquam explicabo ea fugit quod commodi omnis sed amet aliquid delectus ducimus maiores dolore recusandae vitae a repellat. Praesentium, debitis voluptatibus sint illum corporis ipsam aliquam maxime voluptates tempora.</p>
+<div class="container-fluid">
+    <h1>About us</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi sint numquam quas magni vero suscipit laboriosam repudiandae fugiat corporis molestiae, odio cum nam neque praesentium! Nulla esse soluta repellendus, corrupti earum aliquam explicabo ea fugit quod commodi omnis sed amet aliquid delectus ducimus maiores dolore recusandae vitae a repellat. Praesentium, debitis voluptatibus sint illum corporis ipsam aliquam maxime voluptates tempora.</p>
+</div>
