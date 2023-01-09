@@ -2,8 +2,10 @@
     <nav>
         <ul>
             <li>
-                <a href="/">Brand</a>
-                <!-- <img src="/controller-logo.svg" alt="Site logo"> -->
+                <a class="brand" href="/">
+                    <img src="/retro-controller.png" alt="Site logo">
+                    Ninja Retro Gaming
+                </a>                
             </li>
         </ul>
         <ul>

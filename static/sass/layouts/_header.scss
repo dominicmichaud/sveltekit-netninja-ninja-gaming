@@ -1,0 +1,18 @@
+@use '../abstracts' as abs;
+@use '../base/typography' as t;
+
+header {
+    a {
+        &.brand {
+            display: flex;
+            align-items: center;
+            @include abs.font_family(t.$headings-family, t.$headings-fallbacks);
+            font-size: calc(var(--font-size) + 10px);
+
+            img {
+                width: 50px;
+                margin-right: 12px;
+            }
+        }
+    }
+}
