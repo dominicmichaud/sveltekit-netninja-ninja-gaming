@@ -4,10 +4,6 @@
     import '@picocss/pico';
 </script>
 
-<style lang="scss" global>
-    @use '../sass/main.scss';
-</style>
-
 <Header />
 
 <main>
