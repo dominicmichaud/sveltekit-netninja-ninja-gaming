@@ -1,0 +1,16 @@
+@use '../abstracts' as abs;
+@use '../base/typography' as t;
+
+h1, h2, h3, h4, h5, h6 {
+    @include abs.font_family(t.$headings-family, t.$headings-fallbacks);
+    color: abs.$primary-color;
+}
+
+p, a , li {
+    @include abs.font_family(t.$body-family, t.$body-fallbacks);
+    color: abs.$primary-color;
+}
+
+html, body {
+    background-color: abs.$bg-color;
+}

@@ -1,0 +1,3 @@
+@mixin font_family($main-font, $fallback-fonts) {
+    font-family: $main-font, $fallback-fonts;
+}
