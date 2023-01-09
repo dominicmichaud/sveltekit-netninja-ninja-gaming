@@ -3,7 +3,7 @@
     <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
     
     <ul>
-        <li><a href="/games">Games</a></li>
+        <li><a href="/games" data-sveltekit-preload-data>Games</a></li>
         <li><a href="/about">About</a></li>
     </ul>
 </div>
