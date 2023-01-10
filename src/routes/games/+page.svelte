@@ -1,6 +1,13 @@
 <script>
+    import { error } from '@sveltejs/kit';
     export let data;
     const { posts } = data;
+
+    if (!posts) {
+        throw error(404, {
+          message: 'Games Not found'
+        });
+    }
 </script>
 
 <section class="section">
@@ -17,7 +24,7 @@
                 {#each posts as { id, title, body }}
                     <div class="column is-one-third">
                         <div class="card">
-                            <a href={`/games/${id}`}>
+                            <a href={`/games/${id}`} data-sveltekit-preload-data>
                                 <div class="card-image">
                                     <figure class="image is-2by1">
                                         <img src={`https://picsum.photos/300/200?random=${id}`} alt={title}>
