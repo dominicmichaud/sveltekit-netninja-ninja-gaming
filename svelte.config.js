@@ -3,7 +3,13 @@ import preprocessor from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: preprocessor(),
+	preprocess: [
+		preprocessor({
+			scss: {
+				prependData: '@use "src/bulma-variables.scss" as *;'
+			}
+		})
+	],
 	kit: {
 		adapter: adapter()
 	}
