@@ -1,17 +1,20 @@
-<header class="container-fluid">
-    <nav>
-        <ul>
-            <li>
-                <a class="brand" href="/">
-                    <img src="/retro-controller.png" alt="Site logo">
+<header>
+    <nav class="navbar" aria-label="main navigation">
+        <div class="container is-fluid">
+            <div class="navbar-brand">
+                <a class="navbar-item is-size-3" href="/">
+                    <img src="/retro-controller.png" width="50" alt="Site logo">
                     Ninja Retro Gaming
-                </a>                
-            </li>
-        </ul>
-        <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#" role="button">Button</a></li>
-        </ul>
+                </a>
+            </div>
+            <div class="navbar-end">
+                <a class="navbar-item" href="/games" data-sveltekit-preload-data>
+                    Games
+                </a>
+                <a class="navbar-item" href="/about">
+                    About
+                </a>
+            </div>
+        </div>     
     </nav>
 </header>
