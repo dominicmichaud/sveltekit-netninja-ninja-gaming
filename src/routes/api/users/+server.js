@@ -1,5 +1,4 @@
-//import { LOGIN_EMAIL, LOGIN_PASSW } from '$env/static/private';
-
+// Simple API Endpoints
 export const GET = async ({ request }) => {
     const authHeader = request.headers.get('Authorization');
     let data;
@@ -34,7 +33,6 @@ export const POST = async ({ request }) => {
     let status;
         
     if (body && Object.keys(body).length > 0) {
-        console.log('body', body)
         data = { message: 'Success', body: body};
         status = '200';
     } else {
