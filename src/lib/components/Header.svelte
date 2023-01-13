@@ -58,7 +58,7 @@
                 {/if}
                 <div class="navbar-item">
                     {#if !user_value}
-                        <a class="button is-light" href="/login" data-sveltekit-preload-data>
+                        <a class="button is-light is-outlined" href="/login" data-sveltekit-preload-data>
                             Login
                         </a>
                     {:else}

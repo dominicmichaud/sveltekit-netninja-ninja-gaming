@@ -1,8 +1,13 @@
 <section class="section">
     <div class="container is-fluid">
-        <h1 class="title has-text-primary">About us</h1>        
-        <p class="subtitle has-text-primary">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi sint numquam quas magni vero suscipit laboriosam repudiandae fugiat corporis molestiae, odio cum nam neque praesentium! Nulla esse soluta repellendus, corrupti earum aliquam explicabo ea fugit quod commodi omnis sed amet aliquid delectus ducimus maiores dolore recusandae vitae a repellat. Praesentium, debitis voluptatibus sint illum corporis ipsam aliquam maxime voluptates tempora.
-        </p>        
+        <div class="columns">
+            <div class="column is-half">
+                <h1 class="title has-text-primary">About us</h1>        
+                <p class="subtitle has-text-primary">
+                    Ninja Retro Gaming is an online archive of video and computer game information. If you want to find out more information about them, or just like reading about past games, you'll likely find what you're looking for here.                    
+                </p>
+                <span class="is-size-7 has-text-primary">[Credit: <a href="https://gamefaqs.gamespot.com/help">Gamefaqs</a>]</span>
+            </div>
+        </div>
     </div>    
 </section> 
