@@ -1,0 +1,15 @@
+.hero {
+    .hero-body {
+        position: relative;
+
+        h1 {
+            letter-spacing: 1px;
+        }
+
+        img.hero-img {
+            position: absolute;
+            right: 50px;
+            bottom: 100px;
+        }
+    }
+}

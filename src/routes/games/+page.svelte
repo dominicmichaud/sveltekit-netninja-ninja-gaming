@@ -1,6 +1,9 @@
 <script>
     import { error } from '@sveltejs/kit';
-    export let data;
+    /**
+	 * @type {{ posts: any; }}
+	 */
+     export let data;
     const { posts } = data;
 
     if (!posts) {
@@ -12,10 +15,15 @@
 
 <section class="section">
     <div class="container is-fluid">
-        <h1 class="title has-text-primary">Games</h1>        
-        <p class="subtitle has-text-primary">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi sint numquam quas magni vero suscipit laboriosam repudiandae fugiat corporis molestiae, odio cum nam neque praesentium! Nulla esse soluta repellendus, corrupti earum aliquam explicabo ea fugit quod commodi omnis sed amet aliquid delectus ducimus maiores dolore recusandae vitae a repellat. Praesentium, debitis voluptatibus sint illum corporis ipsam aliquam maxime voluptates tempora.
-        </p>
+        <div class="columns">
+            <div class="column is-half">
+                <h1 class="title has-text-primary d">NES Games</h1>
+                <p class="subtitle has-text-primary">
+                    The Nintendo Entertainment System (NES) is an 8-bit third-generation home video game console produced by Nintendo. It was first released in Japan in 1983 as the Family Computer (FC), commonly known as the Famicom. The NES, a redesigned version, was released in American test markets on October 18, 1985, before becoming widely available in North America and other countries.
+                </p>
+                <span class="is-size-7 has-text-primary">[Credit: <a href="https://en.wikipedia.org/wiki/Nintendo_Entertainment_System">Wikipedia</a>]</span>
+            </div>
+        </div>        
 
         <div class="columns is-multiline mt-6">
             {#if !data}
