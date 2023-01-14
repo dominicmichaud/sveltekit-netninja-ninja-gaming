@@ -1,8 +1,6 @@
 <script>
     import { enhance } from '$app/forms';
     import { user } from '$lib/stores/store';
-    import { fly, fade } from "svelte/transition";
-    import { elasticOut } from 'svelte/easing';
     import Fa from 'svelte-fa/src/fa.svelte'
     import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
     /**
@@ -11,10 +9,13 @@
     export let form;
     let visible = true;
      
-    // Form Progressive Enhancement function
+    // Form Progressive Enhancement function    
     const handleEnhance = () => {
         // provide a SubmitFunction that runs immediately before the form is submitted
-        // ActionResult callback        
+        // ActionResult callback
+        /** 
+         * @param {*} any
+        */
         return async ({ result, update }) => {            
             if (result.type === 'success') {
                 // If server returns success we update the Store with the User data

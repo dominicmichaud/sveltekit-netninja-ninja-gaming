@@ -1,4 +1,11 @@
-export const load = async ({ fetch, params }) => {
+import { games_data } from "$lib/data/games_data";
+
+/**
+ * 
+ * @param {*} fetch
+ * @returns 
+ */
+/* export const load = async ({ fetch, params }) => {
     const post_id = params.slug;
 
     const fetchPost = async () => {
@@ -16,5 +23,14 @@ export const load = async ({ fetch, params }) => {
     
     return { 
         post: fetchPost()
+    };
+} */
+
+export const load = async ({ params }) => {
+    const post_id = parseInt(params.slug);
+    const single_post = games_data.games.find(el => el.id === post_id);
+        
+    return { 
+        post: single_post
     };
 }

@@ -9,16 +9,16 @@
         });
     }
 
-    const { title, body } = post;
+    const { name, description } = post;
 </script>
 
 <section class="section">
     <div class="container is-fluid">
         <h1 class="title has-text-primary">
-            {title}
+            {name}
         </h1>        
         <p class="subtitle has-text-primary">
-            {body}
+            {description}
         </p>        
     </div>    
 </section>

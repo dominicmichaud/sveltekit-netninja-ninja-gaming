@@ -4,6 +4,11 @@ import { LOGIN_EMAIL, LOGIN_PASSW } from '$env/static/private';
 // Form Actions
 export const actions = {
     // Named Action
+    /**
+     * 
+     * @param {*} request 
+     * @returns 
+     */
     login: async ({ request }) => {
         let user;
         const formData = await request.formData();
