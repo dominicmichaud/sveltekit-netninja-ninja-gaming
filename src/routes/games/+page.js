@@ -1,4 +1,9 @@
-export const load = async ({ fetch }) => {
+/**
+ * 
+ * @param {*} fetch
+ * @returns 
+ */
+/* export const load = async ({ fetch }) => {
     const fetchPosts = async () => {
         let postsData;
         const postsRes = await fetch('https://jsonplaceholder.typicode.com/posts?_page=0&_limit=10');        
@@ -15,4 +20,12 @@ export const load = async ({ fetch }) => {
     return { 
         posts: fetchPosts()
      };
+} */
+
+import { games_data } from "$lib/data/games_data";
+
+export const load = async () => {    
+    return { 
+        posts: games_data
+    };
 }

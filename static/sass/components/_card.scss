@@ -7,6 +7,11 @@
         background-color: #745e90;
     }
 
+    .card-image {
+        overflow: hidden;
+        height: 350px;
+    }
+
     .content {
         color: abs.$bg_color;
 
