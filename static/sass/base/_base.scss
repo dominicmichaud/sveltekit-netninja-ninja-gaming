@@ -14,3 +14,11 @@ p, a , li {
 html, body {
     background-color: abs.$bg-color;
 }
+
+a:not(.button) {
+    transition: color 250ms ease;
+
+    &:hover {
+        color: darken(abs.$primary-color, 15%);
+    }
+}
