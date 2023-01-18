@@ -4,6 +4,7 @@
 	 * @type {{ posts: any; }}
 	 */
     export let data;
+    // Get all Games from Server
     const { posts } = data;
 
     if (!posts) {
@@ -11,10 +12,12 @@
           message: 'Games Not found'
         });
     }
+    
+    // Destructure object
     const { games, credit } = posts;
 </script>
 
-<section class="section">
+<section class="section games-list">
     <div class="container is-fluid">
         <div class="columns">
             <div class="column is-half">
@@ -43,7 +46,13 @@
                             </div>                            
                             <div class="card-content">
                                 <div class="content">
-                                    <h2>{name}</h2>
+                                    <div class="title-wrapper mb-2">
+                                        <h2>{name}</h2>
+                                        <div class="view-more">
+                                            View Game
+                                            <img src="/chevron-right-small-svgrepo-com.svg" alt="carret">
+                                        </div>
+                                    </div>
                                     {description.slice(0, 250) + '...'}
                                 </div>
                             </div>                            

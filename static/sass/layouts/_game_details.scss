@@ -1,0 +1,55 @@
+@use '../abstracts' as abs;
+
+section.game-details {
+    .tabs {
+        li {
+            a {
+                color: abs.$primary-color;
+
+                &:hover {
+                    color: darken(abs.$primary-color, 10%);
+                    border-color: darken(abs.$primary-color, 10%);
+                }
+            }
+
+            &.is-active {
+                a {
+                    color: darken(abs.$primary-color, 20%);
+                    border-color: darken(abs.$primary-color, 20%);
+                }
+            }
+        }
+    }
+
+    #tab-content {        
+        .card {
+            h2, p {
+                color: abs.$bg-color;
+            }
+    
+            h2 {
+                font-size: 1.75rem;
+            }
+    
+            p {
+                margin-bottom: 1rem;
+
+                &.credit {
+                    a {
+                        color: abs.$bg-color;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        #game-art {
+            img {
+                width: 500px;
+            }
+        }
+    }        
+}

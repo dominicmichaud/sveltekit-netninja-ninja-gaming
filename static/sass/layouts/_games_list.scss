@@ -1,0 +1,40 @@
+section.games-list {
+    .card {
+        .card-content {
+            .content {
+                .title-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    h2 {
+                        margin-bottom: 0;
+                    }
+
+                    .view-more {
+                        display: flex;
+                        align-items: center;
+                        transform: translateY(-25px);
+                        opacity: 0;
+                        transition: opacity 250ms ease, transform 250ms cubic-bezier(0,1.32,.8,1.13);
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .card-content {
+                .content {
+                    .view-more {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+}

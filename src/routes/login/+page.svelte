@@ -39,7 +39,7 @@
 <section class="section">
     <div class="container is-fluid">
         <div class="columns is-centered">
-            <div class="column is-one-third">
+            <div class="column is-one-third-fullhd is-four-fifths-desktop">
                 {#if visible}
                     <div class="card login-card">
                         <div class="card-content">
