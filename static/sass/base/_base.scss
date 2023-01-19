@@ -22,3 +22,11 @@ a:not(.button) {
         color: darken(abs.$primary-color, 15%);
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-delay: 0ms !important;
+      animation-duration: 1ms !important;
+      transform: none !important;
+    }
+}

@@ -5,11 +5,10 @@
 	 * @type {{ url?: URL, pathname: any; }}
 	*/
     export let url;
-    ;
 </script>
 
 {#key url}
-    {#if url.pathname !== '/'}        
+    {#if (url.pathname !== '/' && url.pathname !== '/login')}        
         <div
             in:fly="{{ y: -50, duration: 250, delay: 300 }}"
             out:fly|local

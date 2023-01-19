@@ -1,9 +1,12 @@
 <script>
     import { error } from '@sveltejs/kit';
+    import { handleCardMouseMove, handleCardMouseLeave } from '$lib/js/card-tilt.js';
+    
     /**
 	 * @type {{ posts: any; }}
 	 */
     export let data;
+    
     // Get all Games from Server
     const { posts } = data;
 
@@ -14,7 +17,7 @@
     }
     
     // Destructure object
-    const { games, credit } = posts;
+    const { games, credit } = posts;    
 </script>
 
 <section class="section games-list">
@@ -37,7 +40,7 @@
         <div class="columns is-multiline mt-6">
             {#each games as { id, name, description, image_id }}
                 <div class="column is-one-third">
-                    <div class="card">
+                    <div class="card card-{id}" on:mousemove={(e) => handleCardMouseMove(e)} on:mouseleave={(e) => handleCardMouseLeave(e)}>
                         <a href={`/games/${id}`} data-sveltekit-preload-data>
                             <div class="card-image">
                                 <figure class="image">
