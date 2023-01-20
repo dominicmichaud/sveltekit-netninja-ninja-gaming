@@ -1,6 +1,9 @@
 <script>
+    import Logo from '$lib/components/Logo.svelte';
+    import ToggleSwitch from '$lib/components/ToggleSwitch.svelte';
     import { user } from "$lib/stores/store";
-	import { onDestroy } from "svelte";
+	import { onDestroy } from "svelte";    
+
     /**
 	 * @type {any}
 	 */
@@ -33,7 +36,7 @@
         <div class="container is-fluid">
             <div class="navbar-brand">
                 <a class="navbar-item is-size-3" href="/">
-                    <img src="/retro-controller.png" width="50" alt="Site logo">
+                    <Logo />
                     Ninja Retro Gaming
                 </a>
             </div>
@@ -45,7 +48,7 @@
                     About
                 </a>
             </div>
-            <div class="navbar-end">
+            <div class="navbar-end">                
                 {#if parsed_user}
                     <div class="navbar-item">
                         <figure class="image is-32x32">
@@ -66,6 +69,9 @@
                             Logout
                         </button>
                     {/if}
+                </div>
+                <div class="navbar-item">
+                    <ToggleSwitch />
                 </div>
             </div>
         </div>     

@@ -1,11 +1,179 @@
 /* Variables and mixins declared here will be available in all other SCSS files */ /* https://github.com/jgthms/bulma/issues/1293 */
 $primary-override: #decff1;
 $accent-color: #422d5d;
+$primary-dark: #DCDCDC;
+$accent-dark: #343434;
 
+$primary: $primary-override;
 $body-overflow-y: auto;
 $footer-background-color: transparent;
-$primary: $primary-override;
 $navbar-background-color: rgba(0,0,0,0.1);
 $navbar-item-hover-background-color: transparent;
 $navbar-item-color: $primary-override;
-$card-background-color: $primary-override;
+
+    
+// Dark Mode
+@media (prefers-color-scheme: dark) {
+    $primary: $primary-dark;
+    $navbar-item-color: $primary-dark;    
+    
+    html {        
+        &.dark-mode {
+            body {
+                background-color: $accent-dark;
+
+                h1, h2, h3, h4, h5, h6, p, a:not(.button) , li {
+                    color: $primary-dark;
+                }
+
+                header {
+                    nav {
+                        .navbar-brand {
+                            a {    
+                                svg {
+                                    path {
+                                        fill: $primary-dark;
+                                    }
+                                }
+
+                                &:hover {
+                                    svg {
+                                        path {
+                                            fill: darken($primary-dark, 20%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    a.navbar-item {
+                        &:hover {
+                            color: darken($primary-dark, 20%);
+                        }
+                    }
+                }
+
+                .has-text-primary {
+                    color: $primary-dark !important;
+                }
+
+                .card {
+                    background-color: $primary-dark;
+
+                    &.login-card {
+                        h1 {
+                            color: $accent-dark !important;
+                        }
+                    }
+
+                    .card-content {
+                        color: $accent-dark;
+
+                        h2, p, p.credit a {
+                            color: $accent-dark !important;
+                        }
+                    }
+                }
+                
+                .tabs {
+                    li {
+                        a {                                        
+                            &:hover {
+                                color: darken($primary-dark, 15%) !important;
+                                border-color: darken($primary-dark, 15%);
+                            }
+                        }
+            
+                        &.is-active {
+                            a {
+                                color: darken($primary-dark, 25%) !important;
+                                border-color: darken($primary-dark, 25%);
+                            }
+                        }
+                    }
+                }
+            }                        
+        }        
+    }
+}
+
+// Light Mode / Default
+html, body {    
+    background-color: $accent-color;
+
+    h1, h2, h3, h4, h5, h6, p, a:not(.button) , li {
+        color: $primary-override;
+    }
+
+    header {
+        nav {
+            .navbar-brand {
+                a {                        
+                    svg {
+                        path {
+                            fill: $primary-override;
+                        }
+                    }
+
+                    &:hover {
+                        svg {
+                            path {
+                                fill: darken($primary-override, 20%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        a.navbar-item {
+            &:hover {
+                color: darken($primary-override, 20%);
+            }
+        }
+    }
+    
+    .card {
+        background-color: $primary-override;
+
+        &.login-card {
+            background-color: #745e90;
+
+            h2 {
+                color: $accent-color;
+            }
+
+            .help.is-danger {
+                color: #edbec7;
+            }
+        }
+
+        .card-content {
+            color: $accent-color;
+    
+            h2, p, p.credit a {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .tabs {
+        li {
+            a {                                        
+                &:hover {
+                    color: darken($primary-override, 15%) !important;
+                    border-color: darken($primary-override, 15%);
+                }
+            }
+
+            &.is-active {
+                a {
+                    color: darken($primary-override, 25%) !important;
+                    border-color: darken($primary-override, 25%);
+                }
+            }
+        }
+    }    
+}
+

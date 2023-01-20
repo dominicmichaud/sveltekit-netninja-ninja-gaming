@@ -1,22 +1,8 @@
-@use '../abstracts' as abs;
-
 .card {
     height: 100%;
-
-    &.login-card {
-        background-color: #745e90;
-    }
-
+    
     .card-image {
         overflow: hidden;
         height: 350px;
-    }
-
-    .content {
-        color: abs.$bg_color;
-
-        h2 {
-            color: abs.$bg_color;
-        }
     }
 }
