@@ -14,6 +14,9 @@
                 <p class="subtitle has-text-primary">
                     {@html subtitle}
                 </p>
+                <p class="subtitle has-text-primary is-size-6">
+                    A fake website created for the purpose of an online tutorial by the Net Ninja.
+                </p>
                 <a href="/games" class="button">
                     View games
                 </a>

@@ -6,11 +6,15 @@ header {
         .navbar-brand {
             a {
                 @include abs.font_family(t.$headings-family, t.$headings-fallbacks);
-                color: abs.$primary-color;
 
-                img {
+                svg {
                     width: 50px;
-                    margin-right: 12px;
+                    height: auto;
+                    margin-right: 12px;                    
+
+                    path {
+                        transition: color 350ms ease;
+                    }
                 }
             }
         }

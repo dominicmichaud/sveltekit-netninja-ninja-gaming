@@ -24,7 +24,7 @@
     <div class="container is-fluid">
         <div class="columns">
             <div class="column is-half">
-                <h1 class="title has-text-primary d">NES Games</h1>
+                <h1 class="title has-text-primary">NES Games</h1>
                 <p class="subtitle has-text-primary">
                     The Nintendo Entertainment System (NES) is an 8-bit third-generation home video game console produced by Nintendo. It was first released in Japan in 1983 as the Family Computer (FC), commonly known as the Famicom. The NES, a redesigned version, was released in American test markets on October 18, 1985, before becoming widely available in North America and other countries.
                 </p>
