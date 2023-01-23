@@ -1,0 +1,101 @@
+@use '../abstracts' as abs;
+@use '../base/typography' as t;
+
+header {
+    nav {
+        .container {
+            display: flex !important;
+            flex-direction: row;
+            width: 100% !important;
+            justify-content: space-between;
+
+            &.is-fluid {
+                padding-left: 15px;
+                padding-right: 15px;
+
+                @include abs.breakpoint(770) {
+                    padding-left: 32px;
+                    padding-right: 32px;
+                }
+            }                        
+
+            .navbar-end {
+                display: flex !important;
+                flex-direction: row;
+                align-items: center
+            }
+        }
+
+        .navbar-brand {
+            position: relative;
+            z-index: 2;
+
+            a {
+                @include abs.font_family(t.$headings-family, t.$headings-fallbacks);
+
+                svg {
+                    width: 50px;
+                    height: auto;
+                    margin-right: 12px;                    
+
+                    path {
+                        transition: color 350ms ease;
+                    }
+                }
+            }
+        }
+
+        .navbar-menu {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            max-height: 100% !important;
+            left: -100%;
+            top: 0;
+            padding: 70px 15px 15px 15px;
+            transition: left 350ms cubic-bezier(.56,.2,.39,.98);
+
+            &.show-menu {
+                left: 0;
+            }
+
+            @include abs.breakpoint(770) {
+                padding: 70px 32px 15px 32px;
+                width: 350px;
+            }
+
+            @include abs.breakpoint(1024) {
+                position: relative;
+                flex-direction: row;
+                top: unset;
+                left: unset;
+                background-color: transparent;
+                width: auto;
+                height: auto;
+                padding: 0;
+            }
+            
+            .user-welcome {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .navbar-burger {
+            .icon-wrapper {
+                position: relative;
+
+                svg {
+                    position: absolute;
+                }
+            }
+
+            svg {
+                width: 50px;
+                height: auto;
+            }
+        }
+    }   
+}

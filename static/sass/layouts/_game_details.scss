@@ -1,0 +1,27 @@
+section.game-details {    
+    #tab-content {        
+        .card {            
+            h2 {
+                font-size: 1.75rem;
+            }
+    
+            p {
+                margin-bottom: 1rem;
+
+                &.credit {
+                    a {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        #game-art {
+            img {
+                width: 500px;
+            }
+        }
+    }        
+}

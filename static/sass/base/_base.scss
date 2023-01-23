@@ -1,0 +1,30 @@
+@use '../abstracts' as abs;
+@use '../base/typography' as t;
+
+html, body {
+    transition: background-color 200ms ease-in-out;
+
+    &.has-navbar-fixed-top {
+        padding-top: 4rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include abs.font_family(t.$headings-family, t.$headings-fallbacks);
+}
+
+p, a , li {
+    @include abs.font_family(t.$body-family, t.$body-fallbacks);
+}
+
+a:not(.button) {
+    transition: color 250ms ease;    
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-delay: 0ms !important;
+      animation-duration: 1ms !important;
+      transform: none !important;
+    }
+}
