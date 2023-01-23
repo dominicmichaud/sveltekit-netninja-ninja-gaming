@@ -1,3 +1,9 @@
 @mixin font_family($main-font, $fallback-fonts) {
     font-family: $main-font, $fallback-fonts;
 }
+
+@mixin breakpoint($size, $type: 'min-width') {
+    @media screen and (#{$type}: #{$size}px) {
+        @content;
+    }
+}

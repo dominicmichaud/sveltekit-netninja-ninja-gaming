@@ -39,7 +39,7 @@
 
         <div class="columns is-multiline mt-6">
             {#each games as { id, name, description, image_id }}
-                <div class="column is-one-third">
+                <div class="column is-one-third-fullhd is-half-tablet">
                     <div class="card card-{id}" on:mousemove={(e) => handleCardMouseMove(e)} on:mouseleave={(e) => handleCardMouseLeave(e)}>
                         <a href={`/games/${id}`} data-sveltekit-preload-data>
                             <div class="card-image">

@@ -19,23 +19,23 @@ $navbar-item-color: $primary-override;
     
     html {        
         &.dark-mode {
-            body {
-                background-color: $accent-dark;
+            background-color: $accent-dark;
 
+            body {                
                 h1, h2, h3, h4, h5, h6, p, a:not(.button) , li {
                     color: $primary-dark;
                 }
 
                 header {
                     nav {
-                        .navbar-brand {
-                            a {    
+                        .navbar-brand  {
+                            a {
                                 svg {
                                     path {
                                         fill: $primary-dark;
                                     }
                                 }
-
+    
                                 &:hover {
                                     svg {
                                         path {
@@ -43,6 +43,37 @@ $navbar-item-color: $primary-override;
                                         }
                                     }
                                 }
+                            }                            
+                        }
+
+                        .navbar-menu {
+                            background-color: lighten($accent-dark, 10%);
+
+                            @media screen and (min-width: 1024px) {
+                                background-color: transparent;
+                            }
+                        }
+
+                        .navbar-burger {
+                            svg {
+                                path {
+                                    stroke: $primary-dark;
+                                    fill: $primary-dark;
+                                }
+                            }
+
+                            &:hover {
+                                svg {
+                                    path {
+                                        stroke: darken($primary-dark, 20%);
+                                    }
+                                }
+                            }                            
+                        }
+
+                        .user-welcome {
+                            span {
+                                color: $primary-dark;
                             }
                         }
                     }
@@ -59,9 +90,11 @@ $navbar-item-color: $primary-override;
                 }
 
                 .card {
-                    background-color: $primary-dark;
+                    background-color: darken($primary-dark, 10%);
 
                     &.login-card {
+                        background-color: $primary-dark;
+
                         h1 {
                             color: $accent-dark !important;
                         }
@@ -99,81 +132,114 @@ $navbar-item-color: $primary-override;
 }
 
 // Light Mode / Default
-html, body {    
+html {
     background-color: $accent-color;
 
-    h1, h2, h3, h4, h5, h6, p, a:not(.button) , li {
-        color: $primary-override;
-    }
-
-    header {
-        nav {
-            .navbar-brand {
-                a {                        
+    body {
+        h1, h2, h3, h4, h5, h6, p, a:not(.button) , li {
+            color: $primary-override;
+        }
+    
+        header {
+            nav {
+                .navbar-brand {
+                    a {
+                        svg {
+                            path {
+                                fill: $primary-override;
+                            }
+                        }
+        
+                        &:hover {
+                            svg {
+                                path {
+                                    fill: darken($primary-override, 20%);
+                                }
+                            }
+                        }
+                    }                
+                }
+    
+                .navbar-menu {
+                    background-color: lighten($accent-color, 10%);
+    
+                    @media screen and (min-width: 1024px) {
+                        background-color: transparent;
+                    }
+                }
+                
+                .navbar-burger {
                     svg {
                         path {
+                            stroke: $primary-override;
                             fill: $primary-override;
                         }
                     }
-
+    
                     &:hover {
                         svg {
                             path {
-                                fill: darken($primary-override, 20%);
+                                stroke: darken($primary-override, 20%);
                             }
                         }
+                    }                    
+                }
+
+                .user-welcome {
+                    span {
+                        color: $primary-override;
                     }
                 }
             }
-        }
-
-        a.navbar-item {
-            &:hover {
-                color: darken($primary-override, 20%);
-            }
-        }
-    }
     
-    .card {
-        background-color: $primary-override;
-
-        &.login-card {
-            background-color: #745e90;
-
-            h2 {
-                color: $accent-color;
-            }
-
-            .help.is-danger {
-                color: #edbec7;
-            }
-        }
-
-        .card-content {
-            color: $accent-color;
-    
-            h2, p, p.credit a {
-                color: $accent-color;
-            }
-        }
-    }
-
-    .tabs {
-        li {
-            a {                                        
+            a.navbar-item {
                 &:hover {
-                    color: darken($primary-override, 15%) !important;
-                    border-color: darken($primary-override, 15%);
-                }
-            }
-
-            &.is-active {
-                a {
-                    color: darken($primary-override, 25%) !important;
-                    border-color: darken($primary-override, 25%);
+                    color: darken($primary-override, 20%);
                 }
             }
         }
-    }    
+        
+        .card {
+            background-color: $primary-override;
+    
+            &.login-card {
+                background-color: #745e90;
+    
+                h2 {
+                    color: $accent-color;
+                }
+    
+                .help.is-danger {
+                    color: #edbec7;
+                }
+            }
+    
+            .card-content {
+                color: $accent-color;
+        
+                h2, p, p.credit a {
+                    color: $accent-color;
+                }
+            }
+        }
+    
+        .tabs {
+            li {
+                a {                                        
+                    &:hover {
+                        color: darken($primary-override, 15%) !important;
+                        border-color: darken($primary-override, 15%);
+                    }
+                }
+    
+                &.is-active {
+                    a {
+                        color: darken($primary-override, 25%) !important;
+                        border-color: darken($primary-override, 25%);
+                    }
+                }
+            }
+        } 
+    }           
 }
 
