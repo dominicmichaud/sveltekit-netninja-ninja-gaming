@@ -47,7 +47,7 @@ $navbar-item-color: $primary-override;
                         }
 
                         .navbar-menu {
-                            background-color: lighten($accent-dark, 10%);
+                            background-color: darken($accent-dark, 5%);
 
                             @media screen and (min-width: 1024px) {
                                 background-color: transparent;
