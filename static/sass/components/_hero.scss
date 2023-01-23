@@ -1,3 +1,5 @@
+@use '../abstracts' as abs;
+
 .hero {
     .hero-body {
         position: relative;
@@ -7,9 +9,16 @@
         }
 
         img.hero-img {
+            display: none;
             position: absolute;
             right: 50px;
             bottom: 250px;
+        }
+
+        @include abs.breakpoint(770) {
+            img.hero-img {
+                display: block;
+            }
         }
     }
 }
