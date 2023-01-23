@@ -41,7 +41,7 @@
 </script>
 
 <section class="section game-details">
-    <div class="container is-fluid">
+    <div class="container is-fluid px-0">
         <h1 class="title has-text-primary is-size-2">
             {name}
         </h1>        

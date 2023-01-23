@@ -1,5 +1,5 @@
 <section class="section">
-    <div class="container is-fluid">
+    <div class="container is-fluid px-0">
         <div class="columns">
             <div class="column is-half">
                 <h1 class="title has-text-primary">About us</h1>        
