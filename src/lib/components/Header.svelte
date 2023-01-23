@@ -31,6 +31,12 @@
     const handleShowMenu = () => {
         menuOpen = !menuOpen;
     }
+
+    const handleLinkClick = () => {
+        if (menuOpen) {
+            menuOpen = false;   
+        }
+    }
 </script>
 
 <header>
@@ -45,13 +51,13 @@
 
             <div class="navbar-menu {menuOpen ? 'show-menu' : ''}">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="/games" data-sveltekit-preload-data>
+                    <a class="navbar-item" href="/games" data-sveltekit-preload-data on:click={handleLinkClick}>
                         Games
                     </a>
-                    <a class="navbar-item" href="/about">
+                    <a class="navbar-item" href="/about" on:click={handleLinkClick}>
                         About
                     </a>
-                    <MenuLogin currentUser={parsed_user} user={user} classes="is-hidden-desktop" />
+                    <MenuLogin currentUser={parsed_user} user={user} classes="is-hidden-desktop" bind:isOpen={menuOpen} />
                 </div>
             </div>
             
@@ -60,7 +66,7 @@
                 <div class="navbar-item">
                     <ToggleSwitch />
                 </div>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" href="#" on:click|preventDefault={handleShowMenu}>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" href="#burger" on:click|preventDefault={handleShowMenu}>
                     <BurgerMenu isOpen={menuOpen} />
                 </a>               
             </div>            

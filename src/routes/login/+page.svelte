@@ -37,7 +37,7 @@
 </script>
 
 <section class="section">
-    <div class="container is-fluid">
+    <div class="container is-fluid px-0">
         <div class="columns is-centered">
             <div class="column is-one-third-fullhd is-four-fifths-desktop">
                 {#if visible}
